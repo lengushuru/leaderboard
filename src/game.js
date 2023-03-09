@@ -16,7 +16,6 @@ const createNewGame = async (newGame) => {
 const getScores = async (gameId) => {
   const response = await fetch(`${baseURL}games/${gameId}/scores/`);
   const output = await response.json();
-  console.log(output.result);
   return output.result;
 };
 

@@ -11,24 +11,19 @@ renderFooter();
 const form = document.querySelector('#form');
 const list = document.querySelector('.list');
 const refresh = document.querySelector('button');
-const gameID = "ZaHvL1jySJfC6zqpNjAk";
+const gameID = 'ZaHvL1jySJfC6zqpNjAk';
 
-
-const renderList = async () => {  
+const renderList = async () => {
   const scores = await getScores(gameID);
   scores.sort((a, b) => b.score - a.score);
-  console.log('this is scores');
-  console.log(scores);
-  for(let i = 0; i < scores.length; i += 1) {
+  for (let i = 0; i < scores.length; i += 1) {
     const li = document.createElement('li');
-    if(i%2 === 0) {
+    if (i % 2 === 0) {
       li.classList.add('dark');
-    } 
+    }
     li.innerHTML = `${scores[i].user}: ${scores[i].score}`;
     list.appendChild(li);
-
   }
-
 };
 
 const addToList = async (name, score) => {
@@ -54,4 +49,3 @@ form.addEventListener('submit', async (e) => {
 refresh.addEventListener('click', refreshList);
 
 renderList();
-
