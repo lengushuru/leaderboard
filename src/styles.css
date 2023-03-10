@@ -38,18 +38,18 @@ ul {
   width: 100%;
   background-color: #e6e6ee;
   border-radius: 0.2rem;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   padding: 0.1rem;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   max-height: 350px;
   overflow-y: auto;
 }
 
 .list li {
- display: flex;
- align-items: center;
- padding: 0 0.5rem;
-height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  height: 30px;
 }
 
 button {
